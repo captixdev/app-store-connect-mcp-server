@@ -4,6 +4,10 @@ import { ListToolsRequestSchema, CallToolRequestSchema, ErrorCode, McpError } fr
 import jwt from 'jsonwebtoken';
 import fs from 'fs/promises';
 import axios from 'axios';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+
 // Load environment variables
 const config = {
     keyId: process.env.APP_STORE_CONNECT_KEY_ID,
